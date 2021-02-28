@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dice Roller</title>
     <link rel="stylesheet" href="dice.css" />
     <script src="diceArray.js" defer></script>
     <script src="dice.js" defer></script>
 </head>
 <body>
+    <h2>Dice Roller</h2>
     <label for="number-of-dice">Number of Dice: </label>
     <input type="number" id="number-of-dice" min="0" max="6"></input>
     <button id="roll-the-dice-btn" type="button">Roll the Dice!</button>
-    <!-- <button id="roll-the-dice-btn" onclick="rollDice()">Roll the Dice!</button> -->
 
+<section id="section-one">
+    <p id="display-dice"></p>
     <p id="sum-para">Sum = </p>
-    <p id="dice-para">History</p>
+</section>
 
- 
+<section id="section-two">
+    <!-- <p id="dice-para">History</p> -->
+    <ul id="dice-para">History</ul>
+</section>
 
-    <ul></ul>
 </body>
 </html>

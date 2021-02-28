@@ -1,9 +1,12 @@
-const dice = [&#9856 = ⚀
-    &#9857 = ⚁
-    &#9858 = ⚂
-    &#9859 = ⚃
-    &#9860 = ⚄
-    &#9861 = ⚅]
+const dice = [
+    {1: "&#9856"},
+    {2: "&#9857"},
+    {3: "&#9858"},
+    {4: "&#9859"},
+    {4: "&#9860"},
+    {6: "&#9861"},
+];
 
-console.log('bye')
-
+console.log(dice)
+console.log(Object.values(dice))
+console.log(Object.keys(dice))

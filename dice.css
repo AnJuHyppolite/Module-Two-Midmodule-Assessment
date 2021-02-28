@@ -1,0 +1,21 @@
+button {
+    display: flex;
+    justify-content: column;
+}
+
+#section-one {
+    border-style: solid;
+    border-width: 3px;
+    padding: 40px 0px 0px 0px;
+    margin: 20px 5px 5px 0px;
+    font-size: 20px;
+}
+
+#section-two {
+    border-style: solid;
+    border-width: 3px;
+    margin: 20px 5px 5px 0px;
+    font-weight: bold;
+    font-size: 30px;
+    height: fit-content;
+}
