@@ -1,8 +1,8 @@
 let numOfDice = document.querySelector("#number-of-dice");
 let diceButton = document.querySelector("#roll-the-dice-btn");
+let displayDice = document.querySelector("#display-dice");
 let diceSum = document.querySelector("#sum-para");
-let displayDice = document.querySelector("#dice-para");
-const ul = document.querySelector("ul")
+let diceHistory = document.querySelector("#dice-para");
 
 const rollDice = () => {
     let diceStr = "";
@@ -13,12 +13,14 @@ const rollDice = () => {
     diceStr += dice[randomIdx];
     sum += randomIdx + 1
     }
-    diceSum.textContent = `Sum = ${diceStr} ${sum}`;
+    diceSum.innerText = `Sum = ${diceStr} ${sum}`;
 
   const li = document.createElement("li");
 //   li.textContent = `${diceStr} = ${sum}`;
   li.textContent = diceStr + "=" + sum;
-  ul.appendChild(li);
+  diceHistory.appendChild(li);
 };
+
+debugger;
 
 diceButton.addEventListener("click", rollDice);
