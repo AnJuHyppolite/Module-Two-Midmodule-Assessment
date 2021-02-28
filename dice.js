@@ -1,32 +1,26 @@
 let numOfDice = document.querySelector("#number-of-dice");
 let diceButton = document.querySelector("#roll-the-dice-btn");
-let displayDice = document.querySelector("#display-dice")
-let diceSum = document.querySelector("#sum-para")
-let diceHistory = document.querySelector("#dice-para")
+let displayDice = document.querySelector("#display-dice");
+let diceSum = document.querySelector("#sum-para");
+let diceHistory = document.querySelector("#dice-para");
 
 const rollDice = () => {
-    let diceStr = ""
-    let sum = 0;
+    let diceStr = "";
     const numInput = Number(numOfDice.value);
+    let sum = 0;
     for (let i = 0; i < numInput; i++) {
-        let randomRoll = Math.floor(Math.random() * dice.length)
-        diceStr += dice[randomRoll];
-        // sum += randomRoll
-        // diceArray.push
+    let randomIdx = Math.floor(Math.random() * dice.length);
+    diceStr += dice[randomIdx];
+    sum += randomIdx + 1
     }
-    diceSum.innerText = `Sum = ${diceStr} ${sum}`
+    diceSum.innerText = `Sum = ${diceStr} ${sum}`;
 
-   
-    // displayDice.innerText = dice[randomIdx]
-    const li = document.createElement("li");
-    li.textContent = `=${sum}`
-    diceHistory.appendChild(li);
-};    
+  const li = document.createElement("li");
+//   li.textContent = `${diceStr} = ${sum}`;
+  li.textContent = diceStr + "=" + sum;
+  diceHistory.appendChild(li);
+};
 
-for (const key of dice) {
-    console.log(key)
-}
+debugger;
 
-debugger
-
-diceButton.addEventListener("click", rollDice)
+diceButton.addEventListener("click", rollDice);
